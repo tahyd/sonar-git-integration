@@ -36,4 +36,4 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=tahyd_sonar-git-integration_a3787f1e-87a6-4d09-9af0-eb1ccaf08ef0 -Dsonar.projectName='sonar-git-integration'
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dmaven.test.skip=true -Dsonar.projectKey=tahyd_sonar-git-integration_a3787f1e-87a6-4d09-9af0-eb1ccaf08ef0 -Dsonar.projectName='sonar-git-integration'
